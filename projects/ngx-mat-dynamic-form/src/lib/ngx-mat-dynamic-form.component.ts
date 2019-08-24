@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FieldConfig } from 'projects/ngx-mat-dynamic-form/src/lib/models/models';
 
 @Component({
   selector: 'lib-ngx-mat-dynamic-form',
-  template: `
-    <p>
-      ngx-mat-dynamic-form works!
-    </p>
-  `,
+  templateUrl: './ngx-mat-dynamic-form.component.html',
   styles: []
 })
 export class NgxMatDynamicFormComponent implements OnInit {
+  @Input() fields: FieldConfig[] = [];
+
   constructor() {}
 
   ngOnInit() {}
