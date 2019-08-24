@@ -1,6 +1,25 @@
 {
-  "name": "ngx-mat-dynamic-form",
-  "version": "0.0.1",
+  "name": "ngx-mat-dynamic-form-slick",
+  "version": "0.0.2",
+  "description": "Angular Material based dynamic form library",
+  "author": "Jagpreet Singh (jagpreetsingh83@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jagpreetsingh83/ng-mat-dynamic-form.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jagpreetsingh83/ng-mat-dynamic-form/issues"
+  },
+  "homepage": "https://github.com/jagpreetsingh83/ng-mat-dynamic-form",
+  "keywords": [
+    "angular",
+    "javascript",
+    "typescript",
+    "dynamic",
+    "form",
+    "angular-material"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
