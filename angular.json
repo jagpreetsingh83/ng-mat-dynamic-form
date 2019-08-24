@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "NgxMatDynamicForm": {
+      "root": "projects/ngx-mat-dynamic-form",
+      "sourceRoot": "projects/ngx-mat-dynamic-form/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-mat-dynamic-form/tsconfig.lib.json",
+            "project": "projects/ngx-mat-dynamic-form/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-mat-dynamic-form/src/test.ts",
+            "tsConfig": "projects/ngx-mat-dynamic-form/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-mat-dynamic-form/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-mat-dynamic-form/tsconfig.lib.json",
+              "projects/ngx-mat-dynamic-form/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-mat-dynamic-form"
