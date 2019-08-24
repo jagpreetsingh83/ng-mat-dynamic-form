@@ -1,8 +1,9 @@
-import { Directive, Input, OnInit } from '@angular/core';
+import { ComponentFactoryResolver, Directive, Input, OnInit, ViewContainerRef } from '@angular/core';
+import { InputTextComponent } from '@df/components/input-text/input-text.component';
 import { FieldConfig } from '@df/models/models';
 
 const componentMapper = {
-  // input: InputComponent,
+  'input-text': InputTextComponent
   // button: ButtonComponent,
   // select: SelectComponent,
   // date: DateComponent,
@@ -16,9 +17,18 @@ const componentMapper = {
 export class DynamicFieldDirective implements OnInit {
   @Input() field: FieldConfig;
 
-  constructor() {}
+  private componentRef: any;
+
+  constructor(
+    private resolver: ComponentFactoryResolver,
+    private container: ViewContainerRef
+  ) {}
 
   ngOnInit() {
-    console.log(this.field);
+    const factory = this.resolver.resolveComponentFactory(
+      componentMapper[`${this.field.xtype}-${this.field.vtype}`]
+    );
+    this.componentRef = this.container.createComponent(factory);
+    this.componentRef.instance.field = this.field;
   }
 }

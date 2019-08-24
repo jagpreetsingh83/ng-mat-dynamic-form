@@ -5,6 +5,8 @@ import { InputTextComponent } from './components/input-text/input-text.component
 import { DynamicFieldDirective } from './directives/dynamic-field.directive';
 import { NgxMatDynamicFormComponent } from './ngx-mat-dynamic-form.component';
 
+const components = [InputTextComponent];
+
 @NgModule({
   declarations: [
     NgxMatDynamicFormComponent,
@@ -12,6 +14,7 @@ import { NgxMatDynamicFormComponent } from './ngx-mat-dynamic-form.component';
     InputTextComponent
   ],
   imports: [CommonModule],
-  exports: [NgxMatDynamicFormComponent]
+  exports: [NgxMatDynamicFormComponent],
+  entryComponents: [...components]
 })
 export class NgxMatDynamicFormModule {}
