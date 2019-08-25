@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { FieldConfig } from '@df/models/models';
 
 @Component({
-  selector: 'app-input-text',
+  selector: 'lib-input-text',
   templateUrl: './input-text.component.html',
   styleUrls: ['./input-text.component.scss']
 })
 export class InputTextComponent implements OnInit {
+  field: FieldConfig;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

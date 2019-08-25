@@ -4,7 +4,7 @@ import { FieldConfig } from 'projects/ngx-mat-dynamic-form/src/lib/models/models
 @Component({
   selector: 'lib-ngx-mat-dynamic-form',
   templateUrl: './ngx-mat-dynamic-form.component.html',
-  styles: []
+  styleUrls: ['./ngx-mat-dynamic-form.component.scss']
 })
 export class NgxMatDynamicFormComponent implements OnInit {
   @Input() fields: FieldConfig[] = [];
