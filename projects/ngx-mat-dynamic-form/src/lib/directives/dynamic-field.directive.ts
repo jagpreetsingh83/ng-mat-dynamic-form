@@ -1,7 +1,7 @@
 import { ComponentFactoryResolver, Directive, Input, OnInit, ViewContainerRef } from '@angular/core';
-import { FieldConfig } from '@df/models/models';
 
 import { InputTextComponent } from '../components/input-text/input-text.component';
+import { FieldConfig } from '../models/models';
 
 const componentMapper = {
   'input-text': InputTextComponent

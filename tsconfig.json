@@ -14,8 +14,7 @@
     "lib": ["es2018", "dom"],
     "paths": {
       "ngx-mat-dynamic-form": ["dist/ngx-mat-dynamic-form"],
-      "ngx-mat-dynamic-form/*": ["dist/ngx-mat-dynamic-form/*"],
-      "@df/*": ["projects/ngx-mat-dynamic-form/src/lib/*"]
+      "ngx-mat-dynamic-form/*": ["dist/ngx-mat-dynamic-form/*"]
     }
   }
 }

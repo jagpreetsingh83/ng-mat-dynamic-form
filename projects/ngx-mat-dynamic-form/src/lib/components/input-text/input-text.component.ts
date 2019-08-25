@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FieldConfig } from '@df/models/models';
+
+import { FieldConfig } from '../../models/models';
 
 @Component({
   selector: 'lib-input-text',

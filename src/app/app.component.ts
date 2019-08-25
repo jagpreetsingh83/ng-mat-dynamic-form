@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Validators } from '@angular/forms';
-import { FieldConfig } from '@df/models/models';
+import { FieldConfig } from 'projects/ngx-mat-dynamic-form/src/lib/models/models';
 
 @Component({
   selector: 'app-root',

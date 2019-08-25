@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxMatDynamicFormModule } from 'projects/ngx-mat-dynamic-form/src/public_api';
+import { NgxMatDynamicFormModule } from 'ngx-mat-dynamic-form';
 
 import { AppComponent } from './app.component';
 

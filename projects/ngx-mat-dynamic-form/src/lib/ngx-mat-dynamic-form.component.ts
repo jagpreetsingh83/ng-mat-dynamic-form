@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FieldConfig } from 'projects/ngx-mat-dynamic-form/src/lib/models/models';
+
+import { FieldConfig } from './models/models';
 
 @Component({
   selector: 'lib-ngx-mat-dynamic-form',
