@@ -1,5 +1,5 @@
 export interface FieldConfig {
-  name: string;
+  name?: string;
   xtype: string;
   vtype: string;
   label?: string;

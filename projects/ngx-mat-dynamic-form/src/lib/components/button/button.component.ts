@@ -4,11 +4,11 @@ import { FormGroup } from '@angular/forms';
 import { FieldConfig } from '../../models/models';
 
 @Component({
-  selector: 'lib-input-text',
-  templateUrl: './input-text.component.html',
-  styleUrls: ['./input-text.component.scss']
+  selector: 'lib-button',
+  templateUrl: './button.component.html',
+  styleUrls: ['./button.component.scss']
 })
-export class InputTextComponent implements OnInit {
+export class ButtonComponent implements OnInit {
   field: FieldConfig;
   group: FormGroup;
 

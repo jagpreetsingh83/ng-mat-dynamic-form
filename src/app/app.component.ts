@@ -1,6 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material';
 import { FieldConfig } from 'projects/ngx-mat-dynamic-form/src/lib/models/models';
+
+@Component({
+  selector: 'app-dialog-data-example-dialog',
+  template: `
+    <pre>{{ data | json }}</pre>
+  `
+})
+export class FormDataDialogComponent {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+}
 
 @Component({
   selector: 'app-root',
@@ -8,6 +19,8 @@ import { FieldConfig } from 'projects/ngx-mat-dynamic-form/src/lib/models/models
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  constructor(public dialog: MatDialog) {}
+
   fields: FieldConfig[] = [
     {
       name: 'name',
@@ -18,14 +31,25 @@ export class AppComponent {
         {
           name: 'required',
           validator: Validators.required,
-          message: 'Name Required'
+          message: 'Username is required'
         },
         {
           name: 'pattern',
           validator: Validators.pattern('^[a-zA-Z]+$'),
-          message: 'Accepts only text'
+          message: 'Only alphabets are allowed'
         }
       ]
+    },
+    {
+      xtype: 'button',
+      vtype: 'primary',
+      label: 'Save'
     }
   ];
+
+  submit(data) {
+    this.dialog.open(FormDataDialogComponent, {
+      data: data
+    });
+  }
 }
