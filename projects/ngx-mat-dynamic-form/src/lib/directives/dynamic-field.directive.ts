@@ -2,12 +2,12 @@ import { ComponentFactoryResolver, Directive, Input, OnInit, ViewContainerRef } 
 import { FormGroup } from '@angular/forms';
 
 import { ButtonComponent } from '../components/button/button.component';
-import { InputComponent } from '../components/input-text/input.component';
+import { InputComponent } from '../components/input/input.component';
 import { FieldConfig } from '../models/models';
 
 const componentMapper = {
-  'input-text': InputComponent,
-  'button-primary': ButtonComponent
+  input: InputComponent,
+  button: ButtonComponent
   // select: SelectComponent,
   // date: DateComponent,
   // radiobutton: RadiobuttonComponent,
@@ -30,7 +30,7 @@ export class DynamicFieldDirective implements OnInit {
 
   ngOnInit() {
     const factory = this.resolver.resolveComponentFactory(
-      componentMapper[`${this.field.xtype}-${this.field.vtype}`]
+      componentMapper[this.field.xtype]
     );
     this.componentRef = this.container.createComponent(factory);
     this.componentRef.instance.field = this.field;
