@@ -2,11 +2,11 @@ import { ComponentFactoryResolver, Directive, Input, OnInit, ViewContainerRef } 
 import { FormGroup } from '@angular/forms';
 
 import { ButtonComponent } from '../components/button/button.component';
-import { InputTextComponent } from '../components/input-text/input-text.component';
+import { InputComponent } from '../components/input-text/input.component';
 import { FieldConfig } from '../models/models';
 
 const componentMapper = {
-  'input-text': InputTextComponent,
+  'input-text': InputComponent,
   'button-primary': ButtonComponent
   // select: SelectComponent,
   // date: DateComponent,
