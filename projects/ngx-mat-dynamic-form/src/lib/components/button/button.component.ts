@@ -1,18 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component } from '@angular/core';
 
-import { FieldConfig } from '../../models/models';
+import { BaseComponent } from '../base.component';
 
 @Component({
   selector: 'lib-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
-  field: FieldConfig;
-  group: FormGroup;
-
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class ButtonComponent extends BaseComponent {}
