@@ -8,6 +8,7 @@ import { InputComponent } from './components/input/input.component';
 import { DynamicFieldDirective } from './directives/dynamic-field.directive';
 import { MaterialModule } from './material.module';
 import { NgxMatDynamicFormComponent } from './ngx-mat-dynamic-form.component';
+import { NumbersOnlyDirective } from './directives/numbers-only.directive';
 
 const components = [InputComponent, ButtonComponent];
 
@@ -16,7 +17,8 @@ const components = [InputComponent, ButtonComponent];
     NgxMatDynamicFormComponent,
     DynamicFieldDirective,
     InputComponent,
-    ButtonComponent
+    ButtonComponent,
+    NumbersOnlyDirective
   ],
   imports: [
     CommonModule,

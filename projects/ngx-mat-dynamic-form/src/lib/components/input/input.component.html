@@ -1,5 +1,11 @@
 <mat-form-field [formGroup]="group">
-  <input matInput [formControlName]="field.name" [placeholder]="field.label" />
+  <input
+    matInput
+    [formControlName]="field.name"
+    [placeholder]="field.label"
+    [vtype]="field.vtype"
+    libNumbersOnly
+  />
   <ng-container
     *ngFor="let validation of field.validations"
     ngProjectAs="mat-error"

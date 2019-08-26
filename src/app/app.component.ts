@@ -41,6 +41,19 @@ export class AppComponent {
       ]
     },
     {
+      name: 'age',
+      label: 'Age',
+      xtype: 'input',
+      vtype: 'number',
+      validations: [
+        {
+          name: 'required',
+          validator: Validators.required,
+          message: 'Age is required'
+        }
+      ]
+    },
+    {
       xtype: 'button',
       vtype: 'primary',
       label: 'Save'
