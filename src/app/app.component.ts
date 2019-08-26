@@ -50,6 +50,11 @@ export class AppComponent {
           name: 'required',
           validator: Validators.required,
           message: 'Age is required'
+        },
+        {
+          name: 'max',
+          validator: Validators.max(100),
+          message: 'Age must be less than 100'
         }
       ]
     },
